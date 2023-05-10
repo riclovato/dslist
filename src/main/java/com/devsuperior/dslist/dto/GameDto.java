@@ -1,8 +1,8 @@
 package com.devsuperior.dslist.dto;
 
-import com.devsuperior.dslist.entities.Game;
-import jakarta.persistence.Column;
 import org.springframework.beans.BeanUtils;
+
+import com.devsuperior.dslist.entities.Game;
 
 public class GameDto {
     private Long id;

@@ -12,11 +12,11 @@ import com.devsuperior.dslist.repositories.GameListRepository;
 
 @Service
 public class GameListService {
-@Autowired
-private GameListRepository gameListRepository;
-  
-@Transactional(readOnly = true)
-    public List<GameListDto> findAll(){
+    @Autowired
+    private GameListRepository gameListRepository;
+
+    @Transactional(readOnly = true)
+    public List<GameListDto> findAll() {
         List<GameList> result = gameListRepository.findAll();
         return result.stream().map(x -> new GameListDto(x)).toList();
     }
