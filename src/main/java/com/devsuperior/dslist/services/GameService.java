@@ -22,8 +22,7 @@ public class GameService {
         return result.stream().map(x -> new GameMinDto(x)).toList();
     }
 
-    @Transactional(readOnly = true) // readOnly bloqueia o banco de dados para escrita tornando o processo mais
-                                    // rápido
+    @Transactional(readOnly = true) // readOnly blocks the database for write and makes the operation faster
     public GameDto findById(Long id) {
         Game result = gameRepository.findById(id).get();
         return new GameDto(result);
